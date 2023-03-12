@@ -2,8 +2,13 @@
 # This playbook deploys the whole application stack in this site.
 
 - name: configure and deploy the raspberry
-  hosts: raspberry
+  hosts: all
   remote_user: root
+  gather_facts: True
+  become: true
 
   roles:
-    - raspberry
+    - docker_apps
+
+  roles:
+    - common  

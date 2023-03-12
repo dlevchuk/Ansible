@@ -1,15 +1,9 @@
 - name: setup Cronicle
-  gather_facts: True
-  become: true
-
-  tasks:
-
-  - name: Create a data container
-    docker_container:
-      name: cronicle
-      image: bluet/cronicle-docker:latest
-      volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
-      ports:
-        - "3012:3012"
-      restart_policy: always
+  docker_container:
+    name: cronicle
+    image: bluet/cronicle-docker:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "3012:3012"
+    restart_policy: always
