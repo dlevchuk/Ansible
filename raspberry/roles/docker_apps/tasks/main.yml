@@ -1,0 +1,3 @@
+---
+- include: docker_cronicle.yml
+- include: docker_duplicati.yml
