@@ -1,3 +1,9 @@
 ---
-- include_tasks: docker_cronicle.yml
-- include_tasks: docker_duplicati.yml
+#- include_tasks: docker_cronicle.yml
+#- include_tasks: docker_duplicati.yml
+#- include_tasks: docker_glances.yml
+#- include_tasks: docker_portainer.yml
+#- include_tasks: docker_syncthing.yml
+#- include_tasks: docker_thunderbird.yml
+#- include_tasks: docker_uptime_kuma.yml
+- include_tasks: docker_speedtest.yml

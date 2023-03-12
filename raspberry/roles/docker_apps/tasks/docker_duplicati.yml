@@ -13,6 +13,3 @@
     ports:
       - "8200:8200"
     restart_policy: unless-stopped
-
-
-      
