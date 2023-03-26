@@ -3,7 +3,7 @@
     name: speedtest
     image: henrywhitaker3/speedtest-tracker:latest-arm
     volumes:
-      - /home/pi/docker/data:/config
+      - /home/pi/docker/speedtest:/config
     ports:
       - "8765:80"  
     env:
