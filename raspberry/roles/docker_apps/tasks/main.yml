@@ -6,4 +6,4 @@
 #- include_tasks: docker_syncthing.yml
 #- include_tasks: docker_thunderbird.yml
 #- include_tasks: docker_uptime_kuma.yml
-- include_tasks: docker_speedtest.yml
+- include_tasks: docker_adguard.yml
