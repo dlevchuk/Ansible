@@ -14,7 +14,7 @@
     - nano
     - htop
 
-- name: Create cron task
+- name: Create cron task "backup thunderbird"
   ansible.builtin.cron:
     name: "backup thunderbird"
     weekday: "2"
@@ -22,4 +22,13 @@
     hour: "0"
     user: pi
     job: "cd /home/pi/docker/syncthing/sync/backup/thunderbird_backup && sudo tar -zcvf thunderbird_profile_rasp.tar.gz /home/pi/docker/thunderbird/ > /dev/null 2>&1" 
+
+- name: Create cron task "backup docker"
+  ansible.builtin.cron:
+    name: "backup docker"
+    weekday: "2"
+    minute: "0"
+    hour: "1"
+    user: pi
+    job: "cd /home/pi/docker/syncthing/sync/backup_docker/ && sudo tar -zcvf docker_apps.tar.gz /home/pi/docker/ > /dev/null 2>&1" 
 
