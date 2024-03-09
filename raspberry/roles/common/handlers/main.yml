@@ -12,3 +12,8 @@
   ansible.builtin.systemd:
     name: watchdog
     state: restarted
+
+- name: Reload sysctl
+  ansible.builtin.systemd:
+    name: systemd-sysctl
+    state: restarted

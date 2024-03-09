@@ -8,9 +8,12 @@
     backup: yes
   notify: Reload sysctl
 
-- name: Remove auto-update file
-  ansible.builtin.shell:
-    cmd: sudo rm /var/lib/man-db/auto-update
+- name: Remove auto-update file if it exists
+  ansible.builtin.file:
+    path: /var/lib/man-db/auto-update
+    state: absent
+  ignore_errors: yes
+
 
 - name: Create a directory if it does not exist
   ansible.builtin.file:
