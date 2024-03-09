@@ -1,0 +1,14 @@
+- name: Reboot Pi
+  ansible.builtin.reboot:
+    connect_timeout: 30
+    reboot_timeout: 300
+
+- name: Restart watchdog
+  ansible.builtin.service:
+    name: watchdog
+    state: restarted
+
+- name: Check watchdog status
+  ansible.builtin.systemd:
+    name: watchdog
+    state: restarted
